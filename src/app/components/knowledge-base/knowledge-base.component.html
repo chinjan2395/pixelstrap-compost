@@ -1,0 +1,288 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-4 xl-50 col-md-6 box-col-12">
+        <div class="card bg-primary">
+          <div class="card-body">
+            <div class="media faq-widgets">
+              <div class="media-body">
+                <h5>Articles</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div><i data-feather="book-open"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 xl-50 col-md-6 box-col-6">
+        <div class="card bg-primary">
+          <div class="card-body">
+            <div class="media faq-widgets">
+              <div class="media-body">
+                <h5>Knowledgebase</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div><i data-feather="aperture"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 xl-100 box-col-6">
+        <div class="card bg-primary">
+          <div class="card-body">
+            <div class="media faq-widgets">
+              <div class="media-body">
+                <h5>Support</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div><i data-feather="file-text"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="header-faq">
+              <h5 class="mb-0">Browse articles by category</h5>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <form class="form-inline search-form pull-right search-knowledge">
+              <div class="form-group mr-0">
+                <input class="form-control-plaintext" name="search" [(ngModel)]="term" type="text" placeholder="Search..">
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Browse Articles</h5>
+              </div>
+              <div class="card-body">
+                <div class="row browse">
+                  <div class="col-xl-4 xl-50" *ngFor="let kb of Kb | filter:term">
+                    <div class="browse-articles browse-bottom">
+                      <h6><span>
+                          <app-feather-icons [icon]="'archive'"></app-feather-icons>
+                        </span>{{kb.title}}</h6>
+                      <ul [innerHTML]="kb.desc">
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div *ngIf="!(Kb | filter:term).length">
+                      <div class="search-not-found knowledge-search-height text-center">
+                        <div class="">
+                          <img src="assets/images/search-not-found.png" class="second-search">
+                          <h6>Sorry, We didn't find any articles matching this search</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="header-faq">
+          <h5 class="mb-0">Featured Tutorials</h5>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 xl-50 col-md-6 box-col-6">
+            <div class="card features-faq product-box">
+              <div class="faq-image product-img"><img class="img-fluid" src="assets/images/faq/1.jpg" alt="">
+                <div class="product-hover">
+                  <ul>
+                    <li><i class="icon-link"></i></li>
+                    <li><i class="icon-import"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6> Web Design</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div class="card-footer"><span>Dec 15, 2019</span><span class="pull-right"><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i></span></div>
+            </div>
+          </div>
+          <div class="col-xl-3 xl-50 col-md-6 box-col-6">
+            <div class="card features-faq product-box">
+              <div class="faq-image product-img"><img class="img-fluid" src="assets/images/faq/2.jpg" alt="">
+                <div class="product-hover">
+                  <ul>
+                    <li><i class="icon-link"></i></li>
+                    <li><i class="icon-import"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6>Web Development</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div class="card-footer"><span>Dec 15, 2019</span><span class="pull-right"><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star-o font-primary"></i></span></div>
+            </div>
+          </div>
+          <div class="col-xl-3 xl-50 col-md-6 box-col-6">
+            <div class="card features-faq product-box">
+              <div class="faq-image product-img"><img class="img-fluid" src="assets/images/faq/3.jpg" alt="">
+                <div class="product-hover">
+                  <ul>
+                    <li><i class="icon-link"></i></li>
+                    <li><i class="icon-import"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6>UI Design</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div class="card-footer"><span>Dec 15, 2019</span><span class="pull-right"><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i></span></div>
+            </div>
+          </div>
+          <div class="col-xl-3 xl-50 col-md-6 box-col-6">
+            <div class="card features-faq product-box">
+              <div class="faq-image product-img"><img class="img-fluid" src="assets/images/faq/4.jpg" alt="">
+                <div class="product-hover">
+                  <ul>
+                    <li><i class="icon-link"></i></li>
+                    <li><i class="icon-import"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6> UX Design</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div class="card-footer"><span>Dec 15, 2019</span><span class="pull-right"><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star font-primary"></i><i class="fa fa-star-half-o font-primary"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="header-faq">
+          <h5 class="mb-0">Latest articles and videos</h5>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-md-6">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="codepen"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600">Using Video</h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="codepen"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600">Vel illum qu</h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="codepen"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600"> Cum sociis natoqu</h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="file-text"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600"> Donec pede justo</h6>
+                        <p> Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="file-text"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600"> Nam quam nunc</h6>
+                        <p> Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="file-text"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600">Using Video </h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="row">
+              <div class="col-xl-12 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="youtube"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600"> Vel illum qu</h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="youtube"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600"> Cum sociis natoqu</h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="media"><i class="m-r-30" data-feather="youtube"></i>
+                      <div class="media-body">
+                        <h6 class="f-w-600">Donec pede justo</h6>
+                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

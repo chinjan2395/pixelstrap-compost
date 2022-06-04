@@ -1,0 +1,30 @@
+/**=====================
+     54. Tour  CSS Start
+==========================**/
+.joyride-backdrop {
+    &.backdrop-top, &.backdrop-bottom, &.backdrop-left, &.backdrop-right {
+        background-color: rgba($black, 0.8) !important;
+    }
+}
+.joyride-button {
+    background-color: $primary-color !important;
+    &:hover {
+        color: $primary-color !important;
+        border: 2px solid $primary-color !important;
+        background-color: $white !important;
+    }
+}
+
+.joyride-step__title {
+    color: $primary-color !important;
+}
+
+.joyride-step__close {
+    svg {
+        width: 10px;
+        height: 10px;
+    }
+}
+/**=====================
+    54. Tour  CSS Ends
+==========================**/

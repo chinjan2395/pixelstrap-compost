@@ -1,0 +1,528 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-7 xl-100 box-col-12">
+      <div class="card o-hidden">
+        <div class="card-body crypto-current">
+          <div class="row">
+            <div class="col-xl-4 col-sm-6">
+              <div class="current-balance"><span class="f-12 f-w-600">Your Current Balance</span>
+                <h2><span class="mr-2"><i class="icofont icofont-cur-dollar"></i></span><span>6,00,566</span></h2>
+                <div class="btn-vertical-align d-flex">
+                  <button class="btn btn-pill btn-gradient-custom">Withdraw<span class="round-shape"><i
+                        class="icofont icofont-arrow-right"></i></span></button>
+                  <div class="setting-dot d-inline-block">
+                    <div class="setting-bg"><i class="fa fa-spin fa-cog font-primary"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <div class="crypto-amount">
+                <div class="amount-detail">
+                  <label class="f-w-600 f-12">Card Number *</label>
+                  <div class="amount-inner"><span>486*******</span></div>
+                </div>
+                <div class="amount-detail">
+                  <label class="f-w-600 f-12">Amount *</label>
+                  <div class="amount-inner"><span>500,000,000</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5">
+              <div class="crypto-amount">
+                <div class="amount-detail">
+                  <label class="f-w-600 f-12">Expire Date</label>
+                  <div class="amount-inner">
+                    <div class="row">
+                      <div class="col text-center">02</div>
+                      <div class="col text-center">October</div>
+                      <div class="col text-center">2019</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="amount-detail">
+                  <label class="f-w-600 f-12">Cvv</label>
+                  <div class="number-amount">
+                    <div class="amount-inner d-inline-block"><span>4</span></div>
+                    <div class="amount-inner ml-1 d-inline-block"><span>8</span></div>
+                    <div class="amount-inner ml-1 d-inline-block"><span>*</span></div>
+                    <button class="btn btn-gradient-custom pull-right">Deposite</button>
+                  </div>
+                </div>
+                <div class="shape-right">
+                  <div class="shape-create"></div><i class="icofont icofont-rounded-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-5 xl-100 box-col-12">
+      <div class="card">
+        <div class="card-body distributed-crypto">
+          <div class="row">
+            <div class="col-sm-6"><span class="f-12">Our Distributed</span>
+              <h5 class="mb-0">6,235,125<span> CIC</span><span class="d-inline-block distributed-arrow-square"><span
+                    class="square-crypto"><i class="font-primary" data-feather="trending-up"></i></span></span></h5>
+            </div>
+            <div class="col-sm-6 text-right"><span class="f-12">Our Contributed</span>
+              <h5 class="mb-0">5478 ETH | <span>80 BTH</span></h5>
+            </div>
+          </div>
+          <div class="distributed-bottom">
+            <div class="progress sm-progress-bar progress-animate">
+              <div class="progress-gradient-primary" role="progressbar" style="width: 60%" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100"><span class="progress-tooltip">3.5</span><span
+                  class="animate-circle"></span></div>
+            </div>
+          </div><span class="font-primary"><i class="icofont icofont-cur-dollar"></i>0</span><span
+            class="font-primary pull-right"><i class="icofont icofont-cur-dollar"></i>5M </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 xl-50 box-col-6">
+      <div class="card crypto-graph-card sales-overview">
+        <div class="card-header">
+          <div class="media">
+            <div class="media-body d-flex">
+              <div class="rounded-icon bck-gradient-primary"><i class="fa fa-btc"></i></div>
+              <div class="bitcoin-graph-content">
+                <h5>Bitcoin BTC</h5><span class="d-block f-12 f-w-600">0.00000112 BTC $0.05</span>
+              </div>
+            </div><span class="pull-right badge badge-pill"><span class="font-primary"><span class="d-inline-block"><i
+                    class="fa fa-sort-up"></i></span> 7.8%</span></span>
+          </div>
+        </div>
+        <div class="card-body p-0 crm-dashboard-chart">
+          <div class="apex-chart-container">
+            <div id="btc-apex">
+              <apx-chart [series]="bitcoinBtc.series" [chart]="bitcoinBtc.chart" [dataLabels]="bitcoinBtc.dataLabels"
+                [yaxis]="bitcoinBtc.yaxis" [xaxis]="bitcoinBtc.xaxis" [fill]="bitcoinBtc.fill"
+                [stroke]="bitcoinBtc.stroke" [tooltip]="bitcoinBtc.tooltip" [colors]="bitcoinBtc.colors"
+                [grid]="bitcoinBtc.grid" [markers]="bitcoinBtc.markers">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 xl-50 box-col-6">
+      <div class="card crypto-graph-card sales-overview secondary-crypto">
+        <div class="card-header">
+          <div class="media">
+            <div class="media-body d-flex">
+              <div class="rounded-icon bck-gradient-secondary"><i class="fa fa-try"></i></div>
+              <div class="bitcoin-graph-content">
+                <h5>Litecoin LTC</h5><span class="d-block f-12 f-w-600">0.00000348 LTC $0.02</span>
+              </div>
+            </div>
+            <div class="right-setting">
+              <div class="setting-dot d-inline-block mr-3">
+                <div class="setting-bg"><i class="fa fa-spin fa-cog font-secondary"></i></div>
+              </div><span class="pull-right badge badge-pill"><span class="font-secondary"><span
+                    class="d-inline-block"><i class="fa fa-sort-up"></i></span> 4.1%</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0 crm-dashboard-chart">
+          <div class="apex-chart-container">
+            <div id="ltc-apex">
+              <apx-chart [series]="litecoinLtc.series" [chart]="litecoinLtc.chart" [dataLabels]="litecoinLtc.dataLabels"
+                [yaxis]="litecoinLtc.yaxis" [xaxis]="litecoinLtc.xaxis" [fill]="litecoinLtc.fill"
+                [stroke]="litecoinLtc.stroke" [tooltip]="litecoinLtc.tooltip" [colors]="litecoinLtc.colors"
+                [grid]="litecoinLtc.grid" [markers]="litecoinLtc.markers">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 xl-100 box-col-12">
+      <div class="card crypto-graph-card sales-overview warning-crypto">
+        <div class="card-header">
+          <div class="media">
+            <div class="media-body d-flex">
+              <div class="rounded-icon bck-gradient-warning"><i class="fa fa-eur"></i></div>
+              <div class="bitcoin-graph-content">
+                <h5>Ethereum ETH</h5><span class="d-block f-12 f-w-600">0.00000686 LTC $0.07</span>
+              </div>
+            </div><span class="pull-right badge badge-pill"><span class="font-warning"><span class="d-inline-block"><i
+                    class="fa fa-sort-up"></i></span> 4.1%</span></span>
+          </div>
+        </div>
+        <div class="card-body p-0 crm-dashboard-chart">
+          <div class="apex-chart-container">
+            <div id="eth-apex">
+              <apx-chart [chart]="ethereumEtc.chart" [dataLabels]="ethereumEtc.dataLabels" [stroke]="ethereumEtc.stroke"
+                [xaxis]="ethereumEtc.xaxis" [yaxis]="ethereumEtc.yaxis" [grid]="ethereumEtc.grid"
+                [markers]="ethereumEtc.markers" [series]="ethereumEtc.series" [colors]="ethereumEtc.colors"
+                [fill]="ethereumEtc.fill" [tooltip]="ethereumEtc.tooltip">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-7 xl-100 box-col-12">
+      <div class="card">
+        <div class="card-header crypto-header">
+          <h5>Bitcoin Exchange ETH/BTC</h5>
+          <div class="chart-value-box pull-right">
+            <div class="value-square-box-primary"></div><span class="f-12 f-w-600">Value</span>
+            <div class="value-square-box-secondary ml-3"></div><span class="f-12 f-w-600">Value</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="apex-chart-container">
+            <div id="candlestick-chart">
+              <apx-chart [chart]="candleStick.chart" [plotOptions]="candleStick.plotOptions"
+                [series]="candleStick.series" [xaxis]="candleStick.xaxis" [fill]="candleStick.fill"
+                [grid]="candleStick.grid" [yaxis]="candleStick.yaxis">
+              </apx-chart>
+            </div>
+            <div class="our-growth-bottom crypto-graph-card">
+              <div class="media"><span class="f-12 f-w-600">Our Growth</span><span
+                  class="pull-right badge badge-pill ml-3"><span class="font-primary"><span class="d-inline-block"><i
+                        class="fa fa-sort-up"></i></span> 9.4%</span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-5 xl-100 box-col-12">
+      <div class="card sales-overview">
+        <div class="card-header">
+          <h5>Datatable Table Markets</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="sales-product-table crypto-table-market table-responsive">
+            <table class="table table-bordernone">
+              <thead>
+                <tr>
+                  <th scope="col">Coin</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Change%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bitcoin (BTC)</td>
+                  <td><span>$ 50.65</span></td>
+                  <td><span>4 Jan</span></td>
+                  <td><span class="badge badge-pill pill-badge-primary f-14">+ 2.6%</span></td>
+                </tr>
+                <tr>
+                  <td>Ethereum (ETH)</td>
+                  <td><span>$ 9.56</span></td>
+                  <td><span>18 Feb</span></td>
+                  <td><span class="badge badge-pill pill-badge-secondary f-14">- 3.7%</span></td>
+                </tr>
+                <tr>
+                  <td>Ripple (XRP)</td>
+                  <td><span>$ 30.48</span></td>
+                  <td><span>26 March</span></td>
+                  <td><span class="badge badge-pill pill-badge-primary f-14">+ 8.3%</span></td>
+                </tr>
+                <tr>
+                  <td>Bitcoin Case (BCH)</td>
+                  <td><span>$ 102.56</span></td>
+                  <td><span>31 Apr</span></td>
+                  <td><span class="badge badge-pill pill-badge-light font-primary f-14">+ 5.6%</span></td>
+                </tr>
+                <tr>
+                  <td>EOS (EOS)</td>
+                  <td><span>$ 5.48</span></td>
+                  <td><span>2 May</span></td>
+                  <td><span class="badge badge-pill pill-badge-primary f-14">- 2.6%</span></td>
+                </tr>
+                <tr>
+                  <td>Litecoin (LTC)</td>
+                  <td><span>$ 40.46</span></td>
+                  <td><span>10 Jun</span></td>
+                  <td><span class="badge badge-pill pill-badge-secondary f-14">+ 5.6%</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>Buy Bitcoin</h5>
+        </div>
+        <div class="card-body">
+          <div class="bitcoin-table table-responsive">
+            <table class="table table-bordernone">
+              <tbody>
+                <tr>
+                  <td class="f-w-600">Price:</td>
+                  <td> <span class="f-w-600">30.633.30</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-light btn-pill font-primary f-w-600">USD</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="f-w-600">Amount:</td>
+                  <td> <span class="f-w-600">2</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-light btn-pill font-primary f-w-600">BTC</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="f-w-600">Total:</td>
+                  <td> <span class="f-w-600">41.266.60</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-gradient-custom btn-pill f-w-600">USD</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>Sell Bitcoin</h5>
+        </div>
+        <div class="card-body">
+          <div class="bitcoin-table sell-bitcoin table-responsive">
+            <table class="table table-bordernone">
+              <tbody>
+                <tr>
+                  <td class="f-w-600">Price:</td>
+                  <td> <span class="f-w-600">22.165.70</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-pill font-secondary f-w-600">USD</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="f-w-600">Amount:</td>
+                  <td> <span class="f-w-600">2</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-pill font-secondary f-w-600">BTC</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="f-w-600">Total:</td>
+                  <td> <span class="f-w-600">22.165.70</span></td>
+                  <td class="text-right">
+                    <button class="btn bck-gradient-secondary btn-pill f-w-600">USD</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>Stop Limit</h5>
+        </div>
+        <div class="card-body">
+          <div class="bitcoin-table stop-bitcoin table-responsive">
+            <table class="table table-bordernone">
+              <tbody>
+                <tr>
+                  <td class="f-w-600">Price:</td>
+                  <td> <span class="f-w-600">43.167.20</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-pill font-warning f-w-600">USD</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="f-w-600">Amount:</td>
+                  <td> <span class="f-w-600">2</span></td>
+                  <td class="text-right">
+                    <button class="btn btn-pill font-warning f-w-600">BTC</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="f-w-600">Total:</td>
+                  <td> <span class="f-w-600">19.446.00</span></td>
+                  <td class="text-right">
+                    <button class="btn bck-gradient-warning btn-pill f-w-600">USD</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header crypto-header">
+          <h5>Market Depth Chart</h5>
+          <div class="chart-value-box pull-right">
+            <div class="value-square-box-primary"></div><span class="f-12 f-w-600">Value</span>
+            <div class="value-square-box-secondary ml-3"></div><span class="f-12 f-w-600">Value</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="crypto-depth-container">
+            <div class="ct-chart flot-chart-container">
+              <x-chartist [data]=marketDepth.data [options]=marketDepth.options [events]='marketDepth.events'
+                type='Line'>
+              </x-chartist>
+            </div>
+            <div class="crypto-graph-card pull-right">
+              <div class="media"><span class="f-12 f-w-600">Our Growth</span><span class="badge badge-pill ml-3"><span
+                    class="font-primary"><span class="d-inline-block"><i class="fa fa-sort-up"></i></span>
+                    9.4%</span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card sales-overview">
+        <div class="card-header">
+          <h5>Sell Orders</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="sales-product-table crypto-table-market table-responsive">
+            <table class="table table-bordernone">
+              <thead>
+                <tr>
+                  <th scope="col">Price</th>
+                  <th scope="col">ETH</th>
+                  <th scope="col">BTC</th>
+                  <th scope="col">USD</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr class="btn-gradient-custom">
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card sales-overview">
+        <div class="card-header">
+          <h5>Buy Orders</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="sales-product-table crypto-table-market table-responsive">
+            <table class="table table-bordernone">
+              <thead>
+                <tr>
+                  <th scope="col">Price</th>
+                  <th scope="col">ETH</th>
+                  <th scope="col">BTC</th>
+                  <th scope="col">USD</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr class="btn-gradient-custom">
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr class="gradient-table-line-danger">
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+                <tr>
+                  <td>0.98422432</td>
+                  <td><span>0.0953744</span></td>
+                  <td><span>8.64923753</span></td>
+                  <td><span>0.00718167</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

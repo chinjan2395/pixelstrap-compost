@@ -1,0 +1,429 @@
+<!-- Container-fluid starts-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 xl-50 col-6 hospital-patients box-col-6">
+            <div class="card o-hidden">
+                <div class="card-body">
+                    <div class="hospital-widgets media">
+                        <div class="hospital-box light-bg-danger"><img src="assets/images/dashboard-hospital/heart.png"
+                                alt="">
+                        </div>
+                        <div class="media-body">
+                            <div class="hospital-content">
+                                <h3 class="d-inline-block f-w-600">46</h3><span
+                                    class="badge flat-badge-secondary m-l-10">New</span>
+                                <h6 class="m-t-5 mb-0 f-w-600">New Patients</h6>
+                            </div>
+                            <div class="flowers">
+                                <div class="flower1"></div>
+                                <div class="flower2"></div>
+                                <div class="flower3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 xl-50 col-6 hospital-patients box-col-6">
+            <div class="card o-hidden">
+                <div class="card-body">
+                    <div class="hospital-widgets media">
+                        <div class="hospital-box light-bg-primary"><img src="assets/images/dashboard-hospital/brain.png"
+                                alt="">
+                        </div>
+                        <div class="media-body">
+                            <div class="hospital-content">
+                                <h3 class="d-inline-block f-w-600">75</h3><span
+                                    class="badge flat-badge-primary m-l-10">OPD</span>
+                                <h6 class="m-t-5 mb-0 f-w-600">OPD Patients</h6>
+                            </div>
+                            <div class="flowers">
+                                <div class="flower1 flower-primary"></div>
+                                <div class="flower2 flower-primary"></div>
+                                <div class="flower3 flower-primary"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 xl-100 box-col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row r-hospital-chart">
+                        <div class="col-xl-4 col-md-4 col-sm-6">
+                            <div class="media hospital-small-chart">
+                                <div class="small-bar">
+                                    <div class="small-chart">
+                                        <x-chartist class="small-chart-gradient-1" [data]="chart1.data"
+                                            [type]="chart.type" [events]="chart.events" [options]="chart.options">
+                                        </x-chartist>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="d-inline-block f-w-600 m-l-10 mb-0">350</h3>
+                                    <h6 class="mb-0 f-w-600 m-l-10">Operations</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 b-l-light col-md-4 col-sm-6">
+                            <div class="media hospital-small-chart">
+                                <div class="small-bar">
+                                    <div class="small-chart1">
+                                        <x-chartist class="small-chart-gradient-1" [data]="chart2.data"
+                                            [events]="chart.events" [type]="chart.type" [options]="chart.options">
+                                        </x-chartist>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="d-inline-block f-w-600 m-l-10 mb-0">450</h3>
+                                    <h6 class="mb-0 f-w-600 m-l-10">Visitors</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 b-l-light col-md-4 col-sm-12 last-card">
+                            <div class="media hospital-small-chart">
+                                <div class="small-bar">
+                                    <div class="small-chart2">
+                                        <x-chartist class="small-chart-gradient-1" [data]="chart3.data"
+                                            [type]="chart.type" [events]="chart.events" [options]="chart.options">
+                                        </x-chartist>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="d-inline-block f-w-600 m-l-10 mb-0">1021</h3>
+                                    <h6 class="mb-0 f-w-600 m-l-10">Medicine </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 xl-100 box-col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>patient in</h5>
+                </div>
+                <div class="card-body">
+                    <div class="apex-chart-container chart-data">
+                        <div id="column-chart">
+                            <apx-chart [chart]="chart4.chart" [plotOptions]="chart4.plotOptions"
+                                [dataLabels]="chart4.dataLabels" [stroke]="chart4.stroke"
+                                [responsive]="chart4.responsive" [series]="chart4.series" [xaxis]="chart4.xaxis"
+                                [fill]="chart4.fill" [tooltip]="chart4.tooltip" [grid]="chart4.grid"
+                                [yaxis]="chart4.yaxis" [colors]="chart4.colors">
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 xl-100 box-col-6">
+            <div class="card bg-gradient-primary hospital-bg">
+                <div class="card-header">
+                    <h5>Hospital Finances</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="hospital-chartist">
+                        <div class="hospital-curve">
+                            <x-chartist [data]=hospitalCurveChart [options]=hospitalCurveChartOptions type='Line'>
+                            </x-chartist>
+                        </div>
+                        <div class="hospital-pin"><img src="assets/images/dashboard-hospital/hospital-pill.png" alt="">
+                            <div class="hospital-profit"><i class="fa fa-circle-o p-r-10"></i><span
+                                    class="pr-4">Expensens </span><i class="fa fa-database p-r-10"></i><span
+                                    class="p-r-10">profit </span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 xl-50 box-col-6">
+            <div class="card height-equal">
+                <div class="card-header">
+                    <h5>Doctor list</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="sales-product-table crypto-table-market sass-table table-responsive">
+                        <table class="table table-bordernone">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="media"><img class="img-fluid rounded-circle img-40 mr-3"
+                                                src="assets/images/dashboard-hospital/d1.jpg" alt="">
+                                            <div class="media-body"><span class="f-w-600 d-block">Ossim Keter</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><span class="f-w-600 d-block">Dental</span></td>
+                                    <td>
+                                        <button class="btn btn-outline-light txt-dark" type="button">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media"><img class="img-fluid rounded-circle img-40 mr-3"
+                                                src="assets/images/dashboard-hospital/d2.jpg" alt="">
+                                            <div class="media-body"><span class="f-w-600 d-block">Mren Loren </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><span class="f-w-600 d-block">Cardiologist</span></td>
+                                    <td>
+                                        <button class="btn btn-outline-light txt-dark" type="button">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media"><img class="img-fluid rounded-circle img-40 mr-3"
+                                                src="assets/images/dashboard-hospital/d3.jpg" alt="">
+                                            <div class="media-body"><span class="f-w-600 d-block">Fran Loren</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><span class="f-w-600 d-block">Hospitalist</span></td>
+                                    <td>
+                                        <button class="btn btn-outline-light txt-dark" type="button">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media"><img class="img-fluid rounded-circle img-40 mr-3"
+                                                src="assets/images/dashboard-hospital/d4.jpg" alt="">
+                                            <div class="media-body"><span class="f-w-600 d-block">Fran Loren</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><span class="f-w-600 d-block">Surgeon</span></td>
+                                    <td>
+                                        <button class="btn btn-outline-light txt-dark" type="button">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media"><img class="img-fluid rounded-circle img-40 mr-3"
+                                                src="assets/images/dashboard-hospital/d5.jpg" alt="">
+                                            <div class="media-body"><span class="f-w-600 d-block">Loie Fenter</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><span class="f-w-600 d-block">oncologist</span></td>
+                                    <td>
+                                        <button class="btn btn-outline-light txt-dark" type="button">Details</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 xl-50 box-col-6">
+            <div class="card crm-user-card hospital-user height-equal">
+                <div class="card-header">
+                    <div class="crm-user-top-content text-center"><img class="img-fluid rounded-circle"
+                            src="assets/images/dashboard-hospital/p1.jpg" alt="">
+                        <h4> <span class="mr-2"><i class="f-20 font-secondary mdi mdi-cards-heart"></i></span>Henry
+                            Ketrol</h4><span class="badge flat-badge-secondary">Specialist</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="apex-chart-small">
+                                <div id="hospital-area-chart-small">
+                                    <apx-chart [series]="chart5.series" [chart]="chart5.chart" [xaxis]="chart5.xaxis"
+                                        [yaxis]="chart5.yaxis" [dataLabels]="chart5.dataLabels" [stroke]="chart5.stroke"
+                                        [colors]=chart5.colors [fill]="chart5.fill" [tooltip]="chart5.tooltip"
+                                        [grid]="chart5.grid"></apx-chart>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="counter">414</h2>
+                            <h4>operation</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer p-0">
+                    <ul>
+                        <li><span>Specialist List</span></li>
+                        <li><span>Message </span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 xl-50 box-col-6">
+            <div class="card height-equal">
+                <div class="card-header">
+                    <h5>Hospital Activities</h5>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="timeline-circle hospital-timeline">
+                        <div class="media mt-0">
+                            <div class="timeline-background">
+                                <div class="timeline-dot-primary"></div>
+                                <div class="timeline-line"> </div>
+                            </div>
+                            <div class="media-body">
+                                <p>20-4-2019 - Today</p>
+                                <h6>Using Laser Treatment to Help</h6><small class="mb-2 d-block"> <span
+                                        class="font-primary">Elisse
+                                        Joson San </span>Francisco, CA</small>
+                                <p class="paragraph-font f-12">web by far While that's mock-ups and this is politics,
+                                    are they really so
+                                    different? I think the only card she has is the Lorem card.</p><img class="p-r-10"
+                                    src="assets/images/dashboard-hospital/hp1.jpg" alt=""><img class="p-r-10"
+                                    src="assets/images/dashboard-hospital/hp2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="media mt-0">
+                            <div class="timeline-background">
+                                <div class="timeline-dot-secondary"></div>
+                            </div>
+                            <div class="media-body">
+                                <p>19-04-2019 - Yesterday</p>
+                                <h6>A Brief History Of Anesthetics</h6><small class="mb-2 d-block"> <span
+                                        class="font-secondary">Katherine Lumaad</span> Oakland, CA</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-7 xl-50 box-col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Booked Appointment</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="sales-product-table table-responsive booked-table">
+                        <table class="table table-bordernone text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Number</th>
+                                    <th scope="col">Pateint Name</th>
+                                    <th scope="col">Assigned Doctor</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>
+                                        <div class="d-inline-block align-middle">
+                                            <div class="d-inline-block"><span class="f-w-600">Nick Stone</span></div>
+                                        </div>
+                                    </td>
+                                    <td><span>Dr.oliver</span></td>
+                                    <td><span>16/08/2019</span></td>
+                                    <td><span>10:23</span></td>
+                                    <td><span class="badge badge-pill pill-badge-secondary">Action</span></td>
+                                </tr>
+                                <tr>
+                                    <td>02</td>
+                                    <td>
+                                        <div class="d-inline-block align-middle">
+                                            <div class="d-inline-block"><span class="f-w-600">Milano Esco</span></div>
+                                        </div>
+                                    </td>
+                                    <td><span>Dr.George</span></td>
+                                    <td><span>22/08/2019</span></td>
+                                    <td><span>1:25</span></td>
+                                    <td><span class="badge badge-pill pill-badge-success">Action</span></td>
+                                </tr>
+                                <tr>
+                                    <td>03</td>
+                                    <td>
+                                        <div class="d-inline-block align-middle">
+                                            <div class="d-inline-block"><span class="f-w-600">Wiltor Noice</span></div>
+                                        </div>
+                                    </td>
+                                    <td><span>Dr.jack</span></td>
+                                    <td><span>5/09/2019</span></td>
+                                    <td><span>5:50</span></td>
+                                    <td><span class="badge badge-pill pill-badge-warning">Action</span></td>
+                                </tr>
+                                <tr>
+                                    <td>04</td>
+                                    <td>
+                                        <div class="d-inline-block align-middle">
+                                            <div class="d-inline-block"><span class="f-w-600">Anna Strong</span></div>
+                                        </div>
+                                    </td>
+                                    <td><span>Dr.Noah</span></td>
+                                    <td><span>20/02/2019</span></td>
+                                    <td><span>10:50</span></td>
+                                    <td><span class="badge badge-pill pill-badge-primary">Action</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-5 xl-100 box-col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Admit patient list</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="sales-product-table table-responsive hospital-table">
+                        <table class="table table-bordernone text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Pateint Name</th>
+                                    <th scope="col">Diseases</th>
+                                    <th scope="col">Admit Date</th>
+                                    <th scope="col">Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h6 class="f-w-600 mb-0">Nick Stone</h6>
+                                    </td>
+                                    <td><span class="hospital-diseases"><span class="circle-small-primary">
+                                            </span>INFLUENZA</span></td>
+                                    <td><span>16/08/2019</span></td>
+                                    <td><span class="icofont icofont-ui-delete"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6 class="f-w-600 mb-0">Milano Esco</h6>
+                                    </td>
+                                    <td><span class="hospital-diseases"><span
+                                                class="circle-small-warning"></span>TYPHOID</span></td>
+                                    <td><span>22/08/2019</span></td>
+                                    <td><span class="icofont icofont-ui-delete"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6 class="f-w-600 mb-0">Wiltor Noice</h6>
+                                    </td>
+                                    <td><span class="hospital-diseases"><span
+                                                class="circle-small-danger"></span>JAUNDICE</span></td>
+                                    <td><span>05/09/2019</span></td>
+                                    <td><span class="icofont icofont-ui-delete"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6 class="f-w-600 mb-0">Anna Strong</h6>
+                                    </td>
+                                    <td><span class="hospital-diseases"><span
+                                                class="circle-small-success"></span>HEPATITIS</span></td>
+                                    <td><span>20/02/2019</span></td>
+                                    <td><span class="icofont icofont-ui-delete"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Container-fluid Ends-->

@@ -1,0 +1,50 @@
+/**=====================
+     17. List CSS Start
+==========================**/
+.list-group-item.active {
+	background-color: $primary-color;
+	border-color: $primary-color;
+	z-index: 1;
+}
+.list-group{
+	a {
+		&.list-group-item {
+			color: $theme-font-color;
+			&.active {
+				color: $white;
+			}
+		}
+	}
+	i{
+		margin-right: $list-group-margin;
+	}
+	img{
+		height: 40px;
+		width: 40px;
+		margin-right: $list-group-margin;
+	}
+}
+#list-tab {
+	li {
+		&:first-child {
+			.list-group-item {
+				border-top-right-radius: 0.25rem;
+    			border-top-left-radius: 0.25rem;
+			}
+		}
+		&:last-child {
+			.list-group-item {
+				border-bottom-right-radius: 0.25rem;
+    			border-bottom-left-radius: 0.25rem;
+			}
+		}
+		+ li {
+			.list-group-item {
+				border-top: none;
+			}
+		}
+	}
+}
+/**=====================
+     17. List CSS Ends
+==========================**/

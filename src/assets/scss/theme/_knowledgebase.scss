@@ -1,0 +1,97 @@
+/**=====================
+     75. knowledgebase CSS start
+==========================**/
+.browse{
+  .browse-articles{
+    &.browse-bottom{
+      margin-top: 30px;
+    }
+    span{
+      vertical-align: middle;
+      svg{
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        vertical-align: text-top;
+      }
+    }
+    h6{
+      font-weight: 600;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid $light;
+      span{
+        svg{
+          width: 16px;
+          height: 16px;
+          vertical-align: text-top;
+        }
+      }
+    }
+    ul{
+      li{
+        padding: 10px;
+        border-radius: 8px;
+        a{
+          color: $theme-body-font-color;
+        }
+        &:hover{
+          background-color: $light;
+        }
+      }
+    }
+  }
+}
+.search-knowledge {
+  .form-group {
+    &:after , &:before {
+      display: none;
+    }
+    input {
+      padding: 10px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .browse{
+    .browse-articles{
+      &.browse-bottom {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px){
+  .browse{
+    .browse-articles{
+      &.browse-bottom {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px){
+  .browse{
+    .browse-articles{
+      ul{
+        li{
+          a{
+            span{
+              &:nth-child(2){
+                width: 158px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/**=====================
+     75. knowledgebase CSS end
+==========================**/

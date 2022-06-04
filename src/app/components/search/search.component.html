@@ -1,0 +1,48 @@
+<div class="container-fluid search-page">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <form class="search-form">
+                        <div class="form-group m-0">
+                            <label class="sr-only">Email</label>
+                            <input class="form-control-plaintext" type="search" placeholder="Search..">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-body" id="search-custom">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                                <ngb-tabset id="tabset">
+                                    <ngb-tab id=1>
+                                        <ng-template ngbTabTitle class="nav-item"><i class="icon-target"></i>All
+                                        </ng-template>
+                                        <ng-template ngbTabContent class="tab-content">
+                                            <app-webpages></app-webpages>
+                                        </ng-template>
+                                    </ngb-tab>
+                                    <ngb-tab id=2>
+                                        <ng-template ngbTabTitle class="nav-item"><i class="icon-image"></i>Images
+                                        </ng-template>
+                                        <ng-template ngbTabContent class="tab-content">
+                                            <app-images></app-images>
+                                        </ng-template>
+                                    </ngb-tab>
+                                    <ngb-tab id=3>
+                                        <ng-template ngbTabTitle class="nav-item">
+                                            <i class="icon-video-clapper"></i>Videos
+                                        </ng-template>
+                                        <ng-template ngbTabContent class="tab-content">
+                                            <app-videos></app-videos>
+                                        </ng-template>
+                                    </ngb-tab>
+                                </ngb-tabset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

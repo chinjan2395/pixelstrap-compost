@@ -1,0 +1,37 @@
+/**=====================
+     48. Form Wizard CSS Start
+==========================**/
+// form wizard 2
+aw-wizard-navigation-bar {
+    &.horizontal {
+        &.large-filled-symbols {
+            ul {
+                &.steps-indicator {
+                    li {
+                        &.done, &.current {
+                            .step-indicator {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            &.steps-indicator {
+                &.steps-3 {
+                    padding-bottom: 30px !important;
+                    li {
+                        p {
+                            color: $theme-font-color;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/**=====================
+    48. Form Wizard CSS Ends
+==========================**/
