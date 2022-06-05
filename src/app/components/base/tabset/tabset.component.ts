@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbTabChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+// import {NgbTabChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tabset',
@@ -15,7 +15,7 @@ export class TabsetComponent implements OnInit {
 
   ngOnInit() {  }
 
-  public beforeChange($event: NgbTabChangeEvent) {
+  public beforeChange($event: any) {
       if ($event.nextId === 'tab-preventchange2') {
         $event.preventDefault();
       }

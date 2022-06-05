@@ -8,7 +8,7 @@
         <div class="card-body">
           <div class="map-js-height">
             <agm-map [latitude]="lat_m1" [longitude]="lng_m1" [zoom]="zoom_m1" [scrollwheel]="false"
-              [disableDoubleClickZoom]="true" [mapDraggable]="false" [zoomControl]="false" [mapTypeControl]="true">
+              [disableDoubleClickZoom]="true" [mapDraggable]="false">
               <agm-marker>
                 <agm-info-window [disableAutoPan]="true">
                   Hi, this is the content of the <strong>info window</strong>
@@ -27,7 +27,7 @@
         <div class="card-body">
           <div class="map-js-height">
             <agm-map [latitude]="lat_m2" [longitude]="lng_m2" [zoom]="zoom_m2" [disableDefaultUI]="false"
-              [zoomControl]="false" (mapClick)="mapClicked($event)">
+              (mapClick)="mapClicked($event)">
               <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
                 [label]="m.label" [draggable]="false">
                 <agm-info-window>
@@ -64,7 +64,7 @@
         </div>
         <div class="card-body">
           <div class="map-js-height">
-            <agm-map [latitude]="lat_m4" [longitude]="lng_m4" [zoom]=zoom_m4 [mapTypeControl]="true">
+            <agm-map [latitude]="lat_m4" [longitude]="lng_m4" [zoom]=zoom_m4>
               <agm-marker>
                 <agm-info-window [disableAutoPan]="true">
                   Hi, this is the content of the <strong>info window</strong>
@@ -106,7 +106,7 @@
         </div>
         <div class="card-body">
           <div class="map-js-height">
-            <agm-map [latitude]="lat_m6" [longitude]="lng_m6" [zoom]="zoom_m6" [fullscreenControl]="true">
+            <agm-map [latitude]="lat_m6" [longitude]="lng_m6" [zoom]="zoom_m6">
               <agm-polygon [paths]="paths_m6">
               </agm-polygon>
             </agm-map>
@@ -122,7 +122,7 @@
         <div class="card-body">
           <div class="map-js-height">
             <agm-map [latitude]="lat_m7" [longitude]="lng_m7" [zoom]="zoom_m7" [disableDefaultUI]="false"
-              [zoomControl]="false" (mapClick)="mapClicked($event)">
+              (mapClick)="mapClicked($event)">
               <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
                 [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
 
@@ -166,8 +166,7 @@
         </div>
         <div class="card-body">
           <div class="map-js-height">
-            <agm-map [latitude]="lat_m9" [longitude]="lng_m9" [zoom]="zoom_m9" [panControl]="true"
-              [rotateControl]="true">
+            <agm-map [latitude]="lat_m9" [longitude]="lng_m9" [zoom]="zoom_m9">
               <agm-polygon [paths]="paths_m9" [fillColor]="fillcolor_m9" [strokeColor]="strokeColor_m9"
                 [strokeWeight]="pstrokeweight_m9" [fillOpacity]="fillOpacity_m9">
               </agm-polygon>

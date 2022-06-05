@@ -7,7 +7,7 @@ import { LeafletMapComponent } from './leaflet-map/leaflet-map.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [GoogleMapComponent, LeafletMapComponent],

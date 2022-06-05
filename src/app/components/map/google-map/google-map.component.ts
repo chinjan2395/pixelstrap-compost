@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MouseEvent } from '@agm/core';
+// import { MouseEvent } from '@agm/core';
 
 @Component({
   selector: 'app-google-map',
